@@ -1,0 +1,28 @@
+System.out.println("ATTENTION!!  ATTENTION!!  LETS START ROCK PAPER SCISSOR GAME");
+        System.out.println("suppose \n 0 for rock \n 1 for paper \n 2 for scissor ");
+        Scanner sc = new Scanner(System.in);
+        Random ra = new Random();
+        System.out.println("users input");
+        int shot = sc.nextInt();
+        switch (shot) {
+            case 0 -> System.out.println("you entered rock");
+            case 1 -> System.out.println("you entered paper");
+            case 2 -> System.out.println("you entered scissor");
+        }
+        System.out.println("computers input");
+        int shot1 = ra.nextInt(3);
+        switch (shot1) {
+            case 0 -> System.out.println("entered rock");
+            case 1 -> System.out.println("entered paper");
+            case 2 -> System.out.println("entered scissor");
+        }
+
+        if (shot == shot1) {
+            System.out.println("the match is draw");
+        }
+        else if(shot==0 && shot1==2 || shot==1 && shot1==0 || shot==2 && shot1==1){
+            System.out.println("CONGO!!! you win");
+        }
+        else{
+            System.out.println("better luck next time");
+        }
